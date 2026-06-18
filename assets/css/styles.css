@@ -500,3 +500,67 @@ h3 {
     flex-direction: column;
   }
 }
+.lab-life-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  gap: 22px;
+}
+
+.lab-life-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  border-radius: var(--radius-medium);
+  box-shadow: 0 12px 34px rgba(7, 25, 71, 0.05);
+}
+
+.lab-life-card.featured {
+  grid-row: span 2;
+}
+
+.lab-life-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-soft);
+}
+
+.lab-life-card.featured .lab-life-image {
+  aspect-ratio: 16 / 9;
+}
+
+.lab-life-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lab-life-content {
+  padding: 28px;
+}
+
+.lab-life-date {
+  margin: 0 0 10px;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.lab-life-content h3 {
+  margin-bottom: 12px;
+}
+
+.lab-life-content p {
+  color: var(--color-muted);
+}
+
+@media (max-width: 920px) {
+  .lab-life-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-life-card.featured {
+    grid-row: auto;
+  }
+}
