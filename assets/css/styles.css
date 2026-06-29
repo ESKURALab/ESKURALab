@@ -823,4 +823,52 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
-```
+.university-corner-logo {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 210px;
+  padding: 12px 16px;
+  border: 1px solid rgba(223, 230, 239, 0.9);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 40px rgba(7, 25, 71, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.university-corner-logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 46px rgba(7, 25, 71, 0.12);
+}
+
+.university-corner-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-affiliation {
+  margin: -18px auto 22px;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+@media (max-width: 720px) {
+  .university-corner-logo {
+    position: static;
+    max-width: 190px;
+    margin: 0 auto 28px;
+  }
+
+  .hero-affiliation {
+    margin-top: -8px;
+    font-size: 0.72rem;
+  }
+}
